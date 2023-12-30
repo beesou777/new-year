@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Live Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="cube">
+     <div class="top">
+     </div>
+     <div>
+       <span style="--i:0">
+       <h2>20</h2>
+       <h2>24</h2>
+       </span>
+       <span style="--i:1">
+         <h2>20</h2>
+         <h2>24</h2>
+       </span>
+       <span style="--i:2">
+         <h2>20</h2>
+         <h2>24</h2>
+       </span>
+       <span style="--i:3">
+         <h2>20</h2>
+         <h2>24</h2>
+       </span>
+     </div>
+   </div>
+   <script>
+     let texts = document.querySelectorAll('h2');
+     let text = document.querySelectorAll('h1');
+     let shadow = '';
+     
+
+     texts.forEach((text, i) => {
+       shadow += (shadow ? ',' : '') + i * 1 + 'px ' + i * 2 + 'px 0 salmon';
+     });
+   
+     texts.forEach((text) => {
+       text.style.textShadow = shadow;
+     });
+   </script>
+   
+</body>
+</html>
